@@ -1,0 +1,321 @@
+/* Здесь вы напишете основную часть стилей страницы.
+
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+✦ like-icon — для svg-иконки анимированного сердца
+✦ card__like-button — для кнопки Like рядом с иконкой
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
+✦ button__text — для обозначения текстового элемента внутри кнопки
+
+*/
+
+/*Сделайте "резиновыми" другие элементы. Точно так же через clamp() и переменные задайте размеры для логотипа,*/
+/*                                                                  заголовков и отступов (padding, margin).*/
+/*                                                                                                                                                    font-size: clamp(1rem, 5vw, 2rem);*/
+/*padding: clamp(10px, 3vw, 20px);*/
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-inline-size: 320px;
+    min-block-size: 100dvh;
+    font-family: var(--font-family-main);
+    font-variation-settings: 'wght' var(--font-weight-main-normal);
+    background-color: var(--bg-color);
+    color: var(--accent-color);
+
+    background-image: var(--background-image);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.content-section {
+    width: var(--content-width);
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: clamp(120px, 15vw, 136px);
+    padding-bottom: 25px;
+    background-color: var(--bg-color);
+    border: 2px solid var(--accent-color);
+    margin: 102px 0;
+
+}
+
+.header__title {
+    font-family: var(--font-family-accent);
+    font-size: clamp(3rem, 10vw, 4.5rem);
+    font-weight: 400;
+    margin: 0;
+    line-height: 0.9;
+}
+
+.header__subtitle {
+    font-family: var(--font-family-accent);
+    font-size: var(--font-size-accent);
+
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.theme-menu__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-top: var(--gap-s);
+}
+
+
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    gap: 50px;
+}
+
+
+.section__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-color);
+    border: 2px solid var(--accent-color);
+
+
+}
+
+.card__title {
+    align-self: flex-start;
+    font-variation-settings: 'wght' var(--font-weight-main-bold);
+    font-size: var(--font-size-main);
+    line-height: 1.5;
+    padding: 6px 10px;
+
+}
+
+.card__image-wrapper {
+    position: relative;
+}
+
+
+.card__image-decor {
+    position: absolute;
+    right: 13px;
+    top: var(--gap-s);
+    font-family: var(--font-family-accent);
+    font-size: var(--font-size-accent);
+    text-shadow: 0 0 0 var(--color-text-stroke);
+    mix-blend-mode: hard-light;
+    color: var(--accent-color);
+    opacity: 0.8;
+}
+
+@supports ((text-stroke: 1px var(--color-text-stroke)) or (-webkit-text-stroke: 1px var(--color--shadow))) {
+    .card__image-decor {
+        /* Если да, то переопределяем стили на более качественные */
+        text-shadow: none; /* Убираем фоллбэк */
+        -webkit-text-stroke: 1px var(--color-text-stroke); /* Задаем обводку */
+        text-stroke: 1px var(--color-text-stroke);
+    }
+}
+
+.card__text-block {
+    display: flex;
+    flex-direction: column;
+    max-width: 321px;
+    padding: var(--gap-s) 0 var(--gap-l) 0;
+    gap: var(--gap-s);
+}
+
+.card__text {
+    font-weight: var(--font-weight-main-normal);
+}
+
+
+.card__button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: var(--gap-s);
+}
+
+.card__icon-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    width: 40px;
+    height: 40px;
+}
+
+.like-icon {
+    width: 100%;
+    height: auto;
+}
+
+
+
+.card__like-button {
+    font-family: var(--font-family-accent);
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    padding: 12.5px 37px;
+}
+
+.button__text {
+    color: var(--button-text-color);
+}
+
+.card__like-button,
+.save-button {
+    color: var(--button-text-color);
+}
+
+
+.footer {
+    background-color: var(--bg-color);
+    padding: 52px 0 100px 0;
+    display: flex;
+    justify-content: center; /* Центрирует кнопку */
+    align-items: center;
+}
+
+.save-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px; /* Пробел между иконкой и текстом */
+
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    padding: 15px 20px;
+    cursor: pointer;
+
+    font-family: var(--font-family-accent);
+    color: var(--accent-color);
+}
+
+.button__icon {
+    width: 28px;
+    height: 28px;
+}
+
+
+.dialog {
+    padding: var(--gap-l);
+    background-color: var(--bg-color);
+    border: 2px solid var(--accent-color);
+    max-width: 360px;
+    color: var(--accent-color);
+}
+
+.dialog[open] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-l);
+}
+
+.dialog::backdrop {
+    background-color: #00000075;
+}
+
+.dialog__content {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-s);
+    font-family: var(--font-family-accent);
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.dialog__icon {
+    width: 39px;
+    height: 39px;
+    flex-shrink: 0;
+}
+
+.dialog__close-button {
+    width: 100%;
+    padding: 12px 114px;
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    font-family: var(--font-family-accent);
+    font-size: var(--font-size-accent);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.filter-sepia {
+    filter: sepia(0.8);
+}
+
+/* Пример 2: черно-белый */
+.filter-bw {
+    filter: grayscale(1);
+}
+
+/* Пример 3: повышенный контраст */
+.filter-contrast {
+    filter: contrast(1.4);
+}
+
+/* Пример 4: размытие */
+.filter-blur {
+    filter: blur(2px);
+}
+
+/* Пример 5: инверсия цвета */
+.filter-invert {
+    filter: invert(1);
+}
+
+/* Пример 6: поворот оттенка */
+.filter-hue {
+    filter: hue-rotate(180deg);
+}
+
+/* Пример 7 (множественный фильтр): винтаж */
+.filter-vintage {
+    filter: sepia(0.6) contrast(1.1) brightness(0.9) grayscale(0.2);
+}
+
+/* Пример 8: насыщенность */
+.filter-saturate {
+    filter: saturate(2.5);
+}
+
+
+
+
+@media (width <= 375px) {
+    .content-section {
+        /* Растягиваем на всю ширину */
+        width: 100%;
+    }
+
+    .header {
+        /* Уменьшаем вертикальный отступ */
+        margin-top: 68px;
+        margin-bottom: 0;
+    }
+
+    .footer {
+        /* Уменьшаем отступ в футере */
+        padding: 25px 0 68px;
+    }
+}
