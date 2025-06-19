@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol id="floppy-disk" viewBox="0 0 21 21">
+        <!-- ВАЖНО: fill="currentColor" чтобы цвет наследовался от кнопки -->
+        <path fill="currentColor" d="M3 3h12v12H3V3Zm2 2v8h8V5H5Zm4 6H7v2h4v-2Z"/>
+    </symbol>
+</svg>
+

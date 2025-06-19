@@ -1,0 +1,42 @@
+:root {
+
+    --bg-color: #FFFFFF;
+    --accent-color: #000000;
+    --font-weight-main-normal: 400;
+    --font-weight-main-bold: 700;
+    --header-background-color: #FFFFFF;
+    --color-text-stroke: #626262;
+
+    --background-image:
+            repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
+            repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+            linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+
+
+    --content-width: clamp(375px, 70vw, 700px);
+
+    --font-family-main: 'Inter', sans-serif;
+    --font-size-main: 18px;
+
+
+    --font-family-accent: 'Press Start 2P', fantasy;
+    --font-size-accent: 14px;
+
+    --gap-s: 25px;
+    --gap-l: 27px;
+
+
+    --accent-color-hover: #626262;
+
+    --button-text-color: var(--bg-color);
+
+    --contour-color: var(--accent-color);
+    /* Цвет "вспышки" всегда красный */
+    --sparks-color: #FF0000;
+
+}
+
+[data-theme='dark'] {
+    --font-weight-main-normal: 465;
+    --font-weight-main-bold: 785;
+}

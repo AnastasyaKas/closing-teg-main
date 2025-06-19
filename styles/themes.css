@@ -1,0 +1,35 @@
+
+
+
+:root.theme-dark {
+    --bg-color: #000000;
+    --accent-color: #00CC14;
+    --font-weight-main-normal: 465;
+    --font-weight-main-bold: 785;
+    --header-background-color: #000000;
+    --color-text-stroke: #00000080;
+    --button-text-color: var(--accent-color);
+    --contour-color: var(--accent-color);
+    --background-image:
+            repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px),
+            repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
+            linear-gradient(to bottom, #007f0c, #004306);
+
+
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not(.theme-light) {
+        --bg-color: #000000;
+        --accent-color: #00CC14;
+        --font-weight-main-normal: 465;
+        --font-weight-main-bold: 785;
+        --header-background-color: #000000;
+        --color-text-stroke: #00000080;
+        --contour-color: var(--accent-color);
+        --background-image:
+                repeating-linear-gradient(to right, #000 0 2px, transparent 2px 4px),
+                repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
+                linear-gradient(to bottom, #007f0c, #004306);
+    }
+}
